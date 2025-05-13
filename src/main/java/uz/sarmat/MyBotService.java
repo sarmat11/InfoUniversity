@@ -135,7 +135,7 @@ public class MyBotService {
 
         SendMessage sendMessage = new SendMessage();
         sendMessage.setChatId(chatId);
-        sendMessage.setText("Universititutlar");
+        sendMessage.setText("Universitetlar");
 
         ReplyKeyboardMarkup replyKeyboardMarkup = new ReplyKeyboardMarkup();
         List<KeyboardRow> rows = new ArrayList<KeyboardRow>();
@@ -149,9 +149,8 @@ public class MyBotService {
 
 
         KeyboardButton button1 =new KeyboardButton();
-        button1.setText(" Yonsei Universitituti");
+        button1.setText("Yonsei Universitituti");
         row.add(button1);
-
 
 
         KeyboardButton button2 =new KeyboardButton();
