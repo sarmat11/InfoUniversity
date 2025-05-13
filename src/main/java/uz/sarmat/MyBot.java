@@ -22,27 +22,20 @@ public class MyBot extends TelegramLongPollingBot {
             }
 
         }
-        if (text.equals("O'zbek tili")) {
+        if (text.equals("\uD83C\uDDFA\uD83C\uDDFFO'zbek tili")) {
             try {
                 execute(myBotService.Davlatnitanlang(chatId));
             } catch (TelegramApiException e) {
                 throw new RuntimeException(e);
             }
-
-
         }
-
-
         if (text.equals("Amerika")) {
             try {
                 execute(myBotService.Amerika(chatId));
             } catch (TelegramApiException e) {
                 throw new RuntimeException(e);
             }
-
-
         }
-
         if (text.equals("Korea")) {
             try {
                 execute(myBotService.Korea(chatId));
@@ -50,13 +43,17 @@ public class MyBot extends TelegramLongPollingBot {
                 throw new RuntimeException(e);
             }
         }
-
-
-
-
+        if (text.equals("Orqaga")) {
+            try {
+                execute(myBotService.tiltanlash(chatId));
+            } catch (TelegramApiException e) {
+                throw new RuntimeException(e);
+            }
+        }
 
 
     }
+
     @Override
     public String getBotUsername() {
         return "InfoUniversityBot";

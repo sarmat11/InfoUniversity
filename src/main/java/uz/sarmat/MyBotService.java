@@ -34,16 +34,16 @@ public class MyBotService {
         KeyboardRow row = new KeyboardRow();
 
         KeyboardButton button = new KeyboardButton();
-        button.setText("O'zbek tili");
+        button.setText("\uD83C\uDDFA\uD83C\uDDFFO'zbek tili");
         row.add(button);
         rows.add(row);
 
         KeyboardButton button1 = new KeyboardButton();
-        button1.setText("Rus tili");
+        button1.setText("\uD83C\uDDF7\uD83C\uDDFARus tili");
         row.add(button1);
 
         KeyboardButton button2 = new KeyboardButton();
-        button2.setText("English");
+        button2.setText("\uD83C\uDDFA\uD83C\uDDF8English");
         row.add(button2);
 
         replyKeyboardMarkup.setKeyboard(rows);
@@ -67,30 +67,37 @@ public class MyBotService {
         KeyboardRow row = new KeyboardRow();
 
         KeyboardButton button = new KeyboardButton();
-        button.setText("Amerika");
+        button.setText("\uD83C\uDDFA\uD83C\uDDF8America");
         row.add(button);
         rows.add(row);
 
 
         KeyboardButton button1 = new KeyboardButton();
-        button1.setText("Korea");
+        button1.setText("\uD83C\uDDF0\uD83C\uDDF7Korea");
         row.add(button1);
 
 
+        KeyboardRow row1 = new KeyboardRow();
         KeyboardButton button2 = new KeyboardButton();
-        button2.setText("Rassiya");
-        row.add(button2);
+        button2.setText("\uD83C\uDDF7\uD83C\uDDFARussia");
+        row1.add(button2);
+        rows.add(row1);
 
 
         KeyboardButton button3 = new KeyboardButton();
-        button3.setText("Uzbekiston");
-        row.add(button3);
+        button3.setText("\uD83C\uDDFA\uD83C\uDDFFUzbekistan");
+        row1.add(button3);
 
 
-
+        KeyboardRow row2 = new KeyboardRow();
         KeyboardButton button4 = new KeyboardButton();
-        button4.setText("Sengapur");
-        row.add(button4);
+        button4.setText("\uD83C\uDDF8\uD83C\uDDECSingapore");
+        row2.add(button4);
+        rows.add(row2);
+
+        KeyboardButton button5 = new KeyboardButton();
+        button5.setText("Orqaga");
+        row2.add(button5);
 
 
         replyKeyboardMarkup.setKeyboard(rows);
