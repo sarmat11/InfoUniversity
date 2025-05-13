@@ -2,6 +2,8 @@ package uz.sarmat;
 
 import org.telegram.telegrambots.meta.api.methods.send.SendMediaBotMethod;
 import org.telegram.telegrambots.meta.api.methods.send.SendMessage;
+import org.telegram.telegrambots.meta.api.methods.send.SendPhoto;
+import org.telegram.telegrambots.meta.api.objects.InputFile;
 import org.telegram.telegrambots.meta.api.objects.replykeyboard.ReplyKeyboardMarkup;
 import org.telegram.telegrambots.meta.api.objects.replykeyboard.buttons.KeyboardButton;
 import org.telegram.telegrambots.meta.api.objects.replykeyboard.buttons.KeyboardRow;
@@ -180,6 +182,17 @@ public class MyBotService {
 
 
     }
+
+    public SendPhoto harvard(Long chatId){
+        SendPhoto sendPhoto = new SendPhoto();
+        sendPhoto.setChatId(chatId);
+        sendPhoto.setPhoto(new InputFile("https://images.app.goo.gl/5sY6DN7uetCkJyqe6"));
+        sendPhoto.setCaption("Harvard Universiteti haqida to'liq ma'lumotlarni shu yerga yoziladi");
+        return sendPhoto;
+
+    }
+
+
 
 
 

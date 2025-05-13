@@ -50,6 +50,13 @@ public class MyBot extends TelegramLongPollingBot {
                 throw new RuntimeException(e);
             }
         }
+        if (text.equals("Harvard")){
+            try {
+                execute(myBotService.harvard(chatId));
+            } catch (TelegramApiException e) {
+                throw new RuntimeException(e);
+            }
+        }
 
 
     }
