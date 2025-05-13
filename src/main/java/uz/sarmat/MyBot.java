@@ -13,18 +13,50 @@ public class MyBot extends TelegramLongPollingBot {
 
         Long chatId = update.getMessage().getChatId();
         String text = update.getMessage().getText();
-        if (text.equals("/start")){
+        if (text.equals("/start")) {
             try {
                 execute(myBotService.sendMessage(chatId));
+                execute(myBotService.tiltanlash(chatId));
             } catch (TelegramApiException e) {
                 throw new RuntimeException(e);
             }
 
         }
+        if (text.equals("O'zbek tili")) {
+            try {
+                execute(myBotService.Davlatnitanlang(chatId));
+            } catch (TelegramApiException e) {
+                throw new RuntimeException(e);
+            }
+
+
+        }
+
+
+        if (text.equals("Amerika")) {
+            try {
+                execute(myBotService.Amerika(chatId));
+            } catch (TelegramApiException e) {
+                throw new RuntimeException(e);
+            }
+
+
+        }
+
+        if (text.equals("Korea")) {
+            try {
+                execute(myBotService.Korea(chatId));
+            } catch (TelegramApiException e) {
+                throw new RuntimeException(e);
+            }
+        }
+
+
+
+
 
 
     }
-
     @Override
     public String getBotUsername() {
         return "InfoUniversityBot";
