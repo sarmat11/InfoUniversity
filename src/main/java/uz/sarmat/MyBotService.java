@@ -126,7 +126,7 @@ public class MyBotService {
 
 
         KeyboardButton button = new KeyboardButton();
-        button.setText("");
+        button.setText("WIUT");
         row.add(button);
         rows.add(row);
 
@@ -222,7 +222,7 @@ public class MyBotService {
 
         KeyboardButton button5 = new KeyboardButton();
         button5.setText("Orqaga");
-        row.add(button5);
+        row2.add(button5);
 
         replyKeyboardMarkup.setKeyboard(rows);
         replyKeyboardMarkup.setResizeKeyboard(true);
