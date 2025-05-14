@@ -136,6 +136,11 @@ public class MyBotService {
         row.add(button1);
 
 
+        KeyboardButton button2 = new KeyboardButton();
+        button2.setText("Orqaga");
+        row.add(button2);
+
+
         replyKeyboardMarkup.setKeyboard(rows);
         replyKeyboardMarkup.setResizeKeyboard(true);
         sendMessage.setReplyMarkup(replyKeyboardMarkup);
@@ -158,6 +163,10 @@ public class MyBotService {
         button.setText("Oxford");
         row.add(button);
         rows.add(row);
+
+        KeyboardButton button1 = new KeyboardButton();
+        button1.setText("Orqaga");
+        row.add(button1);
 
 
 
@@ -208,6 +217,12 @@ public class MyBotService {
         button4.setText("Sungkyunkwan University");
         row2.add(button4);
         rows.add(row2);
+
+
+
+        KeyboardButton button5 = new KeyboardButton();
+        button5.setText("Orqaga");
+        row.add(button5);
 
         replyKeyboardMarkup.setKeyboard(rows);
         replyKeyboardMarkup.setResizeKeyboard(true);
