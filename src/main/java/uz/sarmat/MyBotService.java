@@ -97,9 +97,14 @@ public class MyBotService {
         row2.add(button4);
         rows.add(row2);
 
+
         KeyboardButton button5 = new KeyboardButton();
-        button5.setText("Orqaga");
-        row2.add(button5);
+        button5.setText("\uD83C\uDDEC\uD83C\uDDE7Buyuk Britaniya");
+        row1.add(button5);
+
+        KeyboardButton button6 = new KeyboardButton();
+        button6.setText("Orqaga");
+        row2.add(button6);
 
 
         replyKeyboardMarkup.setKeyboard(rows);
@@ -113,7 +118,7 @@ public class MyBotService {
 
         SendMessage sendMessage = new SendMessage();
         sendMessage.setChatId(chatid);
-        sendMessage.setText("Universititutlar");
+        sendMessage.setText(" Universititutlar");
 
         ReplyKeyboardMarkup replyKeyboardMarkup = new ReplyKeyboardMarkup();
         List<KeyboardRow> rows = new ArrayList<KeyboardRow>();
@@ -142,7 +147,7 @@ public class MyBotService {
     public SendMessage BuyukBritaniya(Long chatId){
         SendMessage sendMessage = new SendMessage();
         sendMessage.setChatId(chatId);
-        sendMessage.setText("Universitetlar");
+        sendMessage.setText(" Universitetlar");
 
 
         ReplyKeyboardMarkup replyKeyboardMarkup = new ReplyKeyboardMarkup();
@@ -167,7 +172,7 @@ public class MyBotService {
 
         SendMessage sendMessage = new SendMessage();
         sendMessage.setChatId(chatId);
-        sendMessage.setText("Universitetlar");
+        sendMessage.setText(" Universitetlar");
 
         ReplyKeyboardMarkup replyKeyboardMarkup = new ReplyKeyboardMarkup();
         List<KeyboardRow> rows = new ArrayList<KeyboardRow>();
@@ -231,12 +236,12 @@ public class MyBotService {
 
 
         KeyboardButton button1 = new KeyboardButton();
-        button1.setText("Saint Petersburg State Universititut");
+        button1.setText("Saint Petersburg State University");
         row.add(button1);
 
 
         KeyboardButton button2 = new KeyboardButton();
-        button2.setText("Moscow State Universititut");
+        button2.setText("Moscow State University");
         row.add(button2);
 
 
@@ -246,7 +251,7 @@ public class MyBotService {
 
 
         KeyboardButton button4 = new KeyboardButton();
-        button4.setText("Tomsk State Universititut");
+        button4.setText("Tomsk State University");
         row.add(button4);
 
         KeyboardButton button5 = new KeyboardButton();

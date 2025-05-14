@@ -52,7 +52,7 @@ public class MyBot extends TelegramLongPollingBot {
             }
         }
 
-        if (!text.equals("\uD83C\uDDEC\uD83C\uDDE7Buyuk Britaniya")) {
+        if (text.equals("\uD83C\uDDEC\uD83C\uDDE7Buyuk Britaniya")) {
             try {
                 execute(myBotService.BuyukBritaniya(chatId));
             } catch (TelegramApiException e) {
@@ -61,42 +61,42 @@ public class MyBot extends TelegramLongPollingBot {
         }
 
 
-            if (text.equals("Orqaga")) {
-                try {
-                    execute(myBotService.tiltanlash(chatId));
-                } catch (TelegramApiException e) {
-                    throw new RuntimeException(e);
-                }
+        if (text.equals("Orqaga")) {
+            try {
+                execute(myBotService.tiltanlash(chatId));
+            } catch (TelegramApiException e) {
+                throw new RuntimeException(e);
             }
-            if (text.equals("Harvard")) {
-                try {
-                    execute(myBotService.harvard(chatId));
-                    //execute(myBotService.sendMessageharvard(chatId));
-                } catch (TelegramApiException e) {
-                    throw new RuntimeException(e);
-                }
+        }
+        if (text.equals("Harvard")) {
+            try {
+                execute(myBotService.harvard(chatId));
+                //execute(myBotService.sendMessageharvard(chatId));
+            } catch (TelegramApiException e) {
+                throw new RuntimeException(e);
             }
-
-            if (text.equals("Oxford")) {
-                try {
-                    execute(myBotService.Oxford(chatId));
-                } catch (TelegramApiException e) {
-                    throw new RuntimeException(e);
-                }
-            }
-
-
         }
 
-        @Override
-        public String getBotUsername () {
-            return "InfoUniversityBot";
+        if (text.equals("Oxford")) {
+            try {
+                execute(myBotService.Oxford(chatId));
+            } catch (TelegramApiException e) {
+                throw new RuntimeException(e);
+            }
         }
 
-        @Override
-        public String getBotToken () {
-            return "7865786833:AAEkF6M6MMG5f5wTPKfInBXMr-HaYlQ6PP8";
-        }
+
     }
+
+    @Override
+    public String getBotUsername() {
+        return "InfoUniversityBot";
+    }
+
+    @Override
+    public String getBotToken() {
+        return "7865786833:AAEkF6M6MMG5f5wTPKfInBXMr-HaYlQ6PP8";
+    }
+}
 
 
