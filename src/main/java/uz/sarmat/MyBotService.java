@@ -15,7 +15,7 @@ import java.util.List;
 public class MyBotService {
 
 
-    public SendMessage sendMessage(Long chatId){
+    public SendMessage sendMessage(Long chatId) {
         SendMessage sendMessage = new SendMessage();
         sendMessage.setChatId(chatId);
         sendMessage.setText("Xush kelibsiz");
@@ -25,7 +25,7 @@ public class MyBotService {
 
     // til tanlash
 
-    public SendMessage tiltanlash(Long chatId){
+    public SendMessage tiltanlash(Long chatId) {
 
         SendMessage sendMessage = new SendMessage();
         sendMessage.setChatId(chatId);
@@ -58,7 +58,7 @@ public class MyBotService {
 
     // davlatlar
 
-    public SendMessage Davlatnitanlang (Long chatid){
+    public SendMessage Davlatnitanlang(Long chatid) {
 
         SendMessage sendMessage = new SendMessage();
         sendMessage.setChatId(chatid);
@@ -109,7 +109,7 @@ public class MyBotService {
 
     }
 
-    public SendMessage Amerika (Long chatid){
+    public SendMessage Amerika(Long chatid) {
 
         SendMessage sendMessage = new SendMessage();
         sendMessage.setChatId(chatid);
@@ -121,14 +121,15 @@ public class MyBotService {
 
 
         KeyboardButton button = new KeyboardButton();
-        button.setText("Oxford");
+        button.setText("");
         row.add(button);
         rows.add(row);
 
 
-        KeyboardButton button1 =new KeyboardButton();
+        KeyboardButton button1 = new KeyboardButton();
         button1.setText("Harvard");
         row.add(button1);
+
 
         replyKeyboardMarkup.setKeyboard(rows);
         replyKeyboardMarkup.setResizeKeyboard(true);
@@ -136,11 +137,33 @@ public class MyBotService {
         return sendMessage;
 
 
-
-
     }
 
-    public SendMessage Korea (Long chatId){
+    public SendMessage BuyukBritaniya(Long chatId){
+        SendMessage sendMessage = new SendMessage();
+        sendMessage.setChatId(chatId);
+        sendMessage.setText("Universitetlar");
+
+
+        ReplyKeyboardMarkup replyKeyboardMarkup = new ReplyKeyboardMarkup();
+        List<KeyboardRow> rows = new ArrayList<KeyboardRow>();
+        KeyboardRow row = new KeyboardRow();
+
+        KeyboardButton button = new KeyboardButton();
+        button.setText("Oxford");
+        row.add(button);
+        rows.add(row);
+
+
+
+
+        replyKeyboardMarkup.setKeyboard(rows);
+        replyKeyboardMarkup.setResizeKeyboard(true);
+        sendMessage.setReplyMarkup(replyKeyboardMarkup);
+        return sendMessage;
+    }
+
+    public SendMessage Korea(Long chatId) {
 
         SendMessage sendMessage = new SendMessage();
         sendMessage.setChatId(chatId);
@@ -157,23 +180,29 @@ public class MyBotService {
         rows.add(row);
 
 
-        KeyboardButton button1 =new KeyboardButton();
+        KeyboardRow row1 = new KeyboardRow();
+        KeyboardButton button1 = new KeyboardButton();
         button1.setText("Yonsei Universitituti");
         row.add(button1);
+        //rows.add(row1);
 
 
-        KeyboardButton button2 =new KeyboardButton();
+        KeyboardButton button2 = new KeyboardButton();
         button2.setText("Pohang University of Science and Technology");
-        row.add(button2);
+        row1.add(button2);
+        rows.add(row1);
 
 
+        KeyboardRow row2 = new KeyboardRow();
         KeyboardButton button3 = new KeyboardButton();
         button3.setText("Hanyang University");
-        row.add(button3);
+        row1.add(button3);
+        //rows.add(row2);
 
         KeyboardButton button4 = new KeyboardButton();
         button4.setText("Sungkyunkwan University");
-        row.add(button4);
+        row2.add(button4);
+        rows.add(row2);
 
         replyKeyboardMarkup.setKeyboard(rows);
         replyKeyboardMarkup.setResizeKeyboard(true);
@@ -183,19 +212,131 @@ public class MyBotService {
 
     }
 
-    public SendPhoto harvard(Long chatId){
+
+    public SendMessage Rassiya(Long chatId) {
+
+        SendMessage sendMessage = new SendMessage();
+        sendMessage.setChatId(chatId);
+        sendMessage.setText("Universititutlar");
+
+        ReplyKeyboardMarkup replyKeyboardMarkup = new ReplyKeyboardMarkup();
+        List<KeyboardRow> rows = new ArrayList<KeyboardRow>();
+        KeyboardRow row = new KeyboardRow();
+
+
+        KeyboardButton button = new KeyboardButton();
+        button.setText("Moscow Institute of Physics and Technology");
+        row.add(button);
+        rows.add(row);
+
+
+        KeyboardButton button1 = new KeyboardButton();
+        button1.setText("Saint Petersburg State Universititut");
+        row.add(button1);
+
+
+        KeyboardButton button2 = new KeyboardButton();
+        button2.setText("Moscow State Universititut");
+        row.add(button2);
+
+
+        KeyboardButton button3 = new KeyboardButton();
+        button3.setText("Higher School of Economics");
+        row.add(button3);
+
+
+        KeyboardButton button4 = new KeyboardButton();
+        button4.setText("Tomsk State Universititut");
+        row.add(button4);
+
+        KeyboardButton button5 = new KeyboardButton();
+        button5.setText("Orqaga");
+        row.add(button5);
+
+
+        replyKeyboardMarkup.setKeyboard(rows);
+        replyKeyboardMarkup.setResizeKeyboard(true);
+        sendMessage.setReplyMarkup(replyKeyboardMarkup);
+        return sendMessage;
+    }
+
+    public SendPhoto harvard(Long chatId) {
         SendPhoto sendPhoto = new SendPhoto();
         sendPhoto.setChatId(chatId);
         sendPhoto.setPhoto(new InputFile("https://images.app.goo.gl/5sY6DN7uetCkJyqe6"));
-        sendPhoto.setCaption("Harvard Universiteti haqida to'liq ma'lumotlarni shu yerga yoziladi");
+        sendPhoto.setCaption("Bakalavr bosqichi uchun talablar (Harvard College):\n" +
+                "\uD83D\uDCCC SAT yoki ACT:\n" +
+                "Harvard test-opsional siyosatini qo‘llaydi (ya'ni, topshirmasa ham bo‘ladi), ammo berilgan bo‘lsa " +
+                "— katta afzallik.\n" +
+                "\n" +
+                "SAT uchun ideal ballar:\n" +
+                "\n" +
+                "Reading + Writing: 730 – 800\n" +
+                "\n" +
+                "Math: 750 – 800\n" +
+                "\n" +
+                "Umumiy SAT: 1450 – 1600 (raqobatbardoshlar odatda 1550+)\n" +
+                "\n" +
+                "ACT: 33 – 36 (maksimal 36)\n" +
+                "\n" +
+                "\uD83D\uDCCC IELTS yoki TOEFL (xalqaro talabalar uchun):\n" +
+                "Agar o'qish tili ingliz tili bo‘lmagan davlatdan bo‘lsangiz, bu talab qilinadi.\n" +
+                "\n" +
+                "IELTS: kamida 7.5, ideal — 8.0 yoki 8.5\n" +
+                "\n" +
+                "TOEFL iBT: kamida 100, ideal — 105 – 110+\n" +
+                "\n" +
+                "Harvardda rasmiy minimal chegaralar ko‘rsatilmagan, lekin yuqori ball bo'lishi kutiladi, " +
+                "chunki raqobat juda kuchli.\n" +
+
+                "\n" +
+                "\n");
         return sendPhoto;
 
     }
 
+    public SendPhoto Oxford(Long chatId) {
+        SendPhoto sendPhoto = new SendPhoto();
+        sendPhoto.setChatId(chatId);
+        sendPhoto.setPhoto(new InputFile("https://www.ox.ac.uk/sites/files/oxford/styles/ow_large_feature/s3/field/fie" +
+                "ld_image_main/b_AllSoulsquad.jpg?itok=tTcH-5ix"));
+        sendPhoto.setCaption("IELTS / TOEFL (xalqaro talabalar uchun):\n" +
+                "Agar siz ingliz tilida ta’lim bermaydigan davlatdan bo‘lsangiz, quyidagi testlar talab qilinadi:\n" +
+                "\n" +
+                "IELTS:\n" +
+                "Umumiy ball: 7.0 yoki 7.5\n" +
+                "\n" +
+                "Har bir bo‘limdan 6.5 yoki 7.0 dan kam bo‘lmasligi kerak\n" +
+                "\n" +
+                "Ba’zi yo‘nalishlar (masalan, huquq, adabiyot) uchun 8.0 talab qilinishi mumkin\n" +
+                "\n" +
+                "TOEFL iBT:\n" +
+                "Umumiy ball: 100 yoki undan yuqori\n" +
+                "\n" +
+                "Har bir bo‘limdan 22–25 dan kam bo‘lmasligi kerak\n" +
+                "\n" +
+                "\uD83D\uDCCC 2. SAT va ACT (Faqat AQShda o‘qiganlar uchun)\n" +
+                "Oxford odatda SAT yoki ACT balllarini AQSh tizimida o‘qigan talabalar uchun so‘raydi.\n" +
+                "\n" +
+                "SAT:\n" +
+                "Umumiy ball: 1460–1600\n" +
+                "\n" +
+                "Har bir bo‘limda kamida 700 bo‘lishi kerak\n" +
+                "\n" +
+                "ACT:\n" +
+                "Kamida 32–36 oralig‘ida bo‘lishi kerak\n" +
+                "\n" +
+                "‼\uFE0F Eslatma: Agar siz O‘zbekiston yoki boshqa mamlakatda inglizdan boshqa tilda " +
+                "ta’lim olgan bo‘lsangiz, IELTS yoki TOEFL yetarli.");
+        return sendPhoto;
 
-
-
-
-
-
+    }
 }
+
+
+
+
+
+
+
+
