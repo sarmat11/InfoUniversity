@@ -85,6 +85,47 @@ public class MyBot extends TelegramLongPollingBot {
             }
         }
 
+        if (text.equals("Seoul National University")) {
+            try {
+                execute(myBotService.SeoulNationalUniversity(chatId));
+            } catch (TelegramApiException e) {
+                throw new RuntimeException(e);
+            }
+        }
+
+        if (text.equals("Yonsei University")) {
+            try {
+                execute(myBotService.YonseiUniversity(chatId));
+            } catch (TelegramApiException e) {
+                throw new RuntimeException(e);
+            }
+        }
+
+        if (text.equals("Pohang University of Science and Technology")) {
+            try {
+                execute(myBotService.PohangUniversityofScienceandTechnology(chatId));
+            } catch (TelegramApiException e) {
+                throw new RuntimeException(e);
+            }
+        }
+
+        if (text.equals("Hanyang University")) {
+            try {
+                execute(myBotService.HanyangUniversity(chatId));
+            } catch (TelegramApiException e) {
+                throw new RuntimeException(e);
+            }
+        }
+
+        if (text.equals("Sungkyunkwan University")) {
+            try {
+                execute(myBotService.SungkyunkwanUniversity(chatId));
+            } catch (TelegramApiException e) {
+                throw new RuntimeException(e);
+            }
+        }
+
+
 
     }
 
