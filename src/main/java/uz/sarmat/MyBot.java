@@ -20,8 +20,8 @@ public class MyBot extends TelegramLongPollingBot {
             } catch (TelegramApiException e) {
                 throw new RuntimeException(e);
             }
-
         }
+        
         if (text.equals("\uD83C\uDDFA\uD83C\uDDFFO'zbek tili")) {
             try {
                 execute(myBotService.Davlatnitanlang(chatId));

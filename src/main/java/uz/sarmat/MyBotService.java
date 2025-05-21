@@ -421,6 +421,7 @@ public class MyBotService {
         );
         return sendPhoto;
     }
+
     public SendPhoto PohangUniversityofScienceandTechnology(Long chatId) {
         SendPhoto sendPhoto = new SendPhoto();
         sendPhoto.setChatId(chatId);
@@ -514,7 +515,6 @@ public class MyBotService {
     }
 
 
-
     public SendPhoto SungkyunkwanUniversity(Long chatId) {
         SendPhoto sendPhoto = new SendPhoto();
         sendPhoto.setChatId(chatId);
@@ -546,9 +546,7 @@ public class MyBotService {
                 "Ko‘plab dasturlar ingliz tilida olib boriladi, xususan, global iqtisodi" +
                 "yot, global biznes boshqaruvi, dasturiy ta'minot, global biotibbiyot injiniringi kabi " +
                 "yo‘nalishlarda 100% ingliz tilida ta'lim beriladi."
-
         );
-
 
         return sendPhoto;
     }
