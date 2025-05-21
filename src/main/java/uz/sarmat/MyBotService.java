@@ -241,34 +241,45 @@ public class MyBotService {
         KeyboardRow row = new KeyboardRow();
 
 
+
+
         KeyboardButton button = new KeyboardButton();
         button.setText("Moscow Institute of Physics and Technology");
         row.add(button);
         rows.add(row);
 
 
+
+        KeyboardRow row2 = new KeyboardRow();
         KeyboardButton button1 = new KeyboardButton();
         button1.setText("Saint Petersburg State University");
-        row.add(button1);
+        row2.add(button1);
+
 
 
         KeyboardButton button2 = new KeyboardButton();
         button2.setText("Moscow State University");
-        row.add(button2);
+        row2.add(button2);
+        rows.add(row2);
 
 
+
+        KeyboardRow row1 = new KeyboardRow();
         KeyboardButton button3 = new KeyboardButton();
         button3.setText("Higher School of Economics");
-        row.add(button3);
+        row1.add(button3);
+
 
 
         KeyboardButton button4 = new KeyboardButton();
         button4.setText("Tomsk State University");
-        row.add(button4);
+        row1.add(button4);
+
 
         KeyboardButton button5 = new KeyboardButton();
         button5.setText("Orqaga");
-        row.add(button5);
+        row1.add(button5);
+        rows.add(row1);
 
 
         replyKeyboardMarkup.setKeyboard(rows);
@@ -349,6 +360,8 @@ public class MyBotService {
 
     }
 
+    //korea
+
     public SendPhoto SeoulNationalUniversity(Long chatId) {
         SendPhoto sendPhoto = new SendPhoto();
         sendPhoto.setChatId(chatId);
@@ -397,18 +410,14 @@ public class MyBotService {
                 "Professor-o‘qituvchilar: 3,500 dan ortiq professor-o‘qituvchi faoliyat yuritadi .\n" +
                 "\n" +
                 "\uD83C\uDF10 Xalqaro dasturlar va til kurslari\n" +
-                "Yonsei International Summer School (YISS): Har yili yozda o‘tkaziladigan 6-haftalik dastur, 30 dan ortiq mamlakatdan talabalarni jalb etadi .\n" +
+                "Yonsei International Summer School (YISS): Har yili yozda o‘tkaziladigan " +
+                "6-haftalik dastur, 30 dan ortiq mamlakatdan talabalarni jalb etadi .\n" +
                 "\n" +
                 "Winter Abroad at Yonsei (WAY): Qisqa muddatli qishki dastur, dekabr-yanvar oylarida o‘tkaziladi.\n" +
                 "\n" +
                 "Yonsei Korean Language Institute (KLI): 1959-yilda tashkil etilgan, koreys tilini o‘rganmoqchi bo‘lgan xalqaro talabalar uchun 6 darajali intensiv kurslar taklif etadi .\n" +
                 "Vikipediya\n" +
-                "\n" +
-                "\uD83C\uDFE5 Tibbiyot va sog‘liqni saqlash\n" +
-                "Severance Hospital: 1885-yilda tashkil etilgan, Janubiy Koreyadagi eng qadimiy va yirik universitet klinikalaridan biri. Har yili 2,5 milliondan ortiq bemorga xizmat ko‘rsatadi .\n" +
-                "\n" +
-                "Yonsei University Health System tarkibida bir nechta tibbiy muassasalar mavjud.\n" +
-                "Vikipediya\n"
+                "\n"
         );
         return sendPhoto;
     }
@@ -519,17 +528,6 @@ public class MyBotService {
                 "\n" +
                 "Professor-o‘qituvchilar: 1,200 nafar\n" +
                 "\n" +
-                "\uD83D\uDCCA Reytinglar\n" +
-                "QS World University Rankings 2025: #123-o‘rin\n" +
-                "\n" +
-                "Times Higher Education (THE) 2025: #102-o‘rin\n" +
-                "\n" +
-                "US News Best Global Universities 2025: #275-o‘rin\n" +
-                "\n" +
-                "Janubiy Koreyada: 4-o‘rin\n" +
-                "Edujourney\n" +
-                "US News\n" +
-                "\n" +
                 "\uD83C\uDF93 Fakultetlar va dasturlar\n" +
                 "SKKU keng qamrovli akademik dasturlarni taklif etadi, jumladan:\n" +
                 "\n" +
@@ -554,6 +552,212 @@ public class MyBotService {
 
         return sendPhoto;
     }
+
+    //russia
+    public SendPhoto MoscowInstituteofPhysicsandTechnology(Long chatId) {
+        SendPhoto sendPhoto = new SendPhoto();
+        sendPhoto.setChatId(chatId);
+        sendPhoto.setPhoto(new InputFile("https://www.rusvuz.com/wp-content/uploads/2019/04/RUSVUZ_MIPT2.jpg"));
+        sendPhoto.setCaption("\uD83C\uDFDB Asosiy ma'lumotlar\n" +
+                "Rasmiy nomi: Moscow Institute of Physics and Technology (MIPT)\n" +
+                "\n" +
+                "Tashkil etilgan yili: 1951\n" +
+                "\n" +
+                "Joylashuvi: Dolgoprudniy, Moskva viloyati, Rossiya\n" +
+                "\n" +
+                "Talabalar soni: 6,431 nafar\n" +
+                "\n" +
+                "Xalqaro talabalar: 1,323 nafar\n" +
+                "\n" +
+                "Professor-o‘qituvchilar: 1,138 nafar\n" +
+                "\n" +
+                "Rasmiy veb-sayti: mipt.ru\n" +
+                "pk.mipt.ru\n" +
+                "+2\n" +
+                "educom.net\n" +
+                "+2\n" +
+                "shanghairanking.com\n" +
+                "+2\n" +
+                "\n" +
+                "\uD83C\uDF10 Xalqaro hamkorlik va tadqiqotlar\n" +
+                "MIPT xalqaro miqyosda faol hamkorlik qiladi va quyidagi sohalarda yetakchi hisoblanadi:\n" +
+                "\n" +
+                "Sun'iy intellekt: 2018-yilda MIPT Rossiyada Sun'iy intellekt bo‘yicha Milliy Tadqiqot Markazi sifatida tan olingan.\n" +
+                "\n" +
+                "Genomika: 2019-yildan boshlab Kurchatov Genomika Markazi konsorsiumining a'zosi.\n" +
+                "\n" +
+                "Nanooptika va plazmonika: So‘nggi besh yilda 50 dan ortiq yangi laboratoriyalar ochilgan.\n" +
+                "\n" +
+                "Universitetda 92 ta ilmiy laboratoriya mavjud bo‘lib, ularning ko‘pchiligi so‘nggi yillarda tashkil etilgan.");
+
+        return sendPhoto;
+    }
+
+
+    public SendPhoto SaintPetersburgStateUniversity(Long chatId) {
+        SendPhoto sendPhoto = new SendPhoto();
+        sendPhoto.setChatId(chatId);
+        sendPhoto.setPhoto(new InputFile("https://welcometostudy.com/sites/default/files/higher-education/150" +
+                "/glavnayaspbguglobaleducation.jpg"));
+        sendPhoto.setCaption("\uD83C\uDFDB Asosiy ma'lumotlar\n" +
+                "Joylashuvi: Sankt-Peterburg, Rossiya\n" +
+                "\n" +
+                "Talabalar soni: 32,400 nafar (bakalavr va magistratura bosqichlarida)\n" +
+                "\n" +
+                "Xalqaro talabalar: 100 dan ortiq mamlakatlardan 3,000 dan ziyod\n" +
+                "\n" +
+                "Rasmiy veb-sayti: english.spbu.ru\n" +
+                "\n" +
+                "Asosiy kampuslar:\n" +
+                "\n" +
+                "Vasilievskiy oroli: Twelve Collegia binosi — boshqaruv va gumanitar fakultetlar joylashgan\n" +
+                "\n" +
+                "Peterhof: Tabiiy fanlar va texnik yo‘nalishlar uchun zamonaviy kampus\n" +
+                "Study Abroad Exams\n" +
+                "+2\n" +
+                "\uD83C\uDF93 Ta'lim yo‘nalishlari\n" +
+                "SPbU 24 ta fakultet va institutdan iborat bo‘lib, quyidagi sohalarda ta'lim beradi:\n" +
+                "\n" +
+                "Tabiiy fanlar: Fizika, matematika, kimyo, biologiya, geologiya\n" +
+                "\n" +
+                "Gumanitar fanlar: Tarix, falsafa, adabiyot, tilshunoslik, san'atshunoslik\n" +
+                "\n" +
+                "Ijtimoiy fanlar: Huquq, siyosatshunoslik, iqtisodiyot, sotsiologiya\n" +
+                "\n" +
+                "Texnik yo‘nalishlar: Kompyuter fanlari, muhandislik, axborot texnologiyalari\n" +
+                "\n" +
+                "Biznes va boshqaruv: Biznes boshqaruvi, moliya, marketing\n" +
+                "\n" +
+                "Ko‘plab magistratura dasturlari ingliz, nemis, fransuz, ispan va italyan tillarida olib boriladi.");
+
+
+        return sendPhoto;
+    }
+
+    public SendPhoto MoscowStateUniversity(Long chatId) {
+        SendPhoto sendPhoto = new SendPhoto();
+        sendPhoto.setChatId(chatId);
+        sendPhoto.setPhoto(new InputFile("https://images.shiksha.com/mediadata/images/1423632114phpSVpSVi_g.jpg"));
+        sendPhoto.setCaption("\uD83C\uDFDB Asosiy ma'lumotlar\n" +
+                "Rasmiy nomi: Lomonosov nomidagi Moskva Davlat Universiteti (MSU)\n" +
+                "\n" +
+                "Tashkil etilgan yili: 1755-yil\n" +
+                "\n" +
+                "Joylashuvi: Moskva, Rossiya\n" +
+                "\n" +
+                "Talabalar soni: Taxminan 47,000 nafar\n" +
+                "\n" +
+                "Xalqaro talabalar: 10,784 nafar\n" +
+                "\n" +
+                "Professor-o‘qituvchilar: 6,755 nafar\n" +
+                "\n" +
+                "Rasmiy veb-sayti: msu.ru\n" +
+                "QSChina\n" +
+                "Vikipediya\n" +
+                "\n" +
+                "\uD83C\uDF93 Ta'lim tizimi va yo‘nalishlar\n" +
+                "MSU 43 ta fakultet va 15 ta ilmiy-tadqiqot institutiga ega bo‘lib, quyidagi sohalarda ta'lim beradi:\n" +
+                "\n" +
+                "Tabiiy fanlar: Fizika, matematika, kimyo, biologiya, geologiya\n" +
+                "\n" +
+                "Gumanitar fanlar: Tarix, falsafa, adabiyot, tilshunoslik, san'atshunoslik\n" +
+                "\n" +
+                "Ijtimoiy fanlar: Huquq, siyosatshunoslik, iqtisodiyot, sotsiologiya\n" +
+                "\n" +
+                "Texnik yo‘nalishlar: Kompyuter fanlari, muhandislik, axborot texnologiyalari\n" +
+                "\n" +
+                "Biznes va boshqaruv: Biznes boshqaruvi, moliya, marketing\n" +
+                "\n" +
+                "Universitetda 300 dan ortiq kafedra mavjud bo‘lib, talabalar uchun keng ko‘lamli ta'lim imkoniyatlari mavjud.");
+
+
+        return sendPhoto;
+    }
+
+
+    public SendPhoto TomskStateUniversity(Long chatId) {
+        SendPhoto sendPhoto = new SendPhoto();
+        sendPhoto.setChatId(chatId);
+        sendPhoto.setPhoto(new InputFile("https://blog.rmgoe.org/wp-content/uploads/2022/06/Tomsk-State-University-Russia.webp"));
+        sendPhoto.setCaption("\uD83C\uDFDB Umumiy ma'lumotlar\n" +
+                "Rasmiy nomi: Milliy tadqiqot Tomsk Davlat Universiteti (TSU)\n" +
+                "\n" +
+                "Tashkil etilgan yili: 1878-yil\n" +
+                "\n" +
+                "Joylashuvi: Tomsk shahri, Rossiya\n" +
+                "\n" +
+                "Talabalar soni: taxminan 23,000 nafar\n" +
+                "\n" +
+                "Xalqaro talabalar: 3,000 dan ortiq, 70 dan ortiq mamlakatlardan\n" +
+                "\n" +
+                "Rasmiy veb-sayti: en.tsu.ru\n" +
+                "en.cjiap.tsu.ru\n" +
+                "+4\n" +
+                "Vikipediya\n" +
+                "+4\n" +
+                "en.viu.tsu.ru\n" +
+                "+4\n" +
+                "\n" +
+                "\uD83D\uDCCA Reytinglar\n" +
+                "QS World University Rankings 2025: #431\n" +
+                "\n" +
+                "Times Higher Education (THE) 2025: 501–600 oralig‘i\n" +
+                "\n" +
+                "U.S. News Best Global Universities: #789 (Rossiyada 11-o‘rin)\n" +
+                "\n" +
+                "Three University Missions (MosIUR) 2023: #211 (Rossiyada 7-o‘rin)\n" +
+                "\n" +
+                "Shanghai ARWU: Fizika bo‘yicha 201–300 o‘rinlar oralig‘i \n" +
+                "uniplusglobal.com\n" +
+                "US News\n" +
+                "\n");
+
+
+        return sendPhoto;
+    }
+
+    public SendPhoto HigherSchoolofEconomics(Long chatId) {
+        SendPhoto sendPhoto = new SendPhoto();
+        sendPhoto.setChatId(chatId);
+        sendPhoto.setPhoto(new InputFile("https://upload.wikimedia.org/wikipedia/commons/c/c0/HSE_University.jpg"));
+        sendPhoto.setCaption("\uD83C\uDFDB Umumiy ma'lumotlar\n" +
+                "Rasmiy nomi: Milliy tadqiqot universiteti — Higher School of Economics (HSE University)\n" +
+                "\n" +
+                "Tashkil etilgan yili: 1992-yil\n" +
+                "\n" +
+                "Asosiy kampus: Moskva, Rossiya\n" +
+                "\n" +
+                "\uD83C\uDF93 Ta'lim va dasturlar\n" +
+                "HSE University 98 ta bakalavriat va 182 ta magistratura dasturlarini taklif etadi, ularning ba'zilari to‘liq ingliz tilida olib boriladi. Shuningdek, universitetda doktorantura, qisqa muddatli kurslar, yozgi maktablar va onlayn dasturlar mavjud .\n" +
+                "hse.ru\n" +
+                "\n" +
+                "HSE quyidagi fakultetlarga ega:\n" +
+                "Vikipediya\n" +
+                "\n" +
+                "Iqtisodiyot fakulteti\n" +
+                "\n" +
+                "Dunyo iqtisodiyoti va xalqaro munosabatlar fakulteti\n" +
+                "\n" +
+                "Kompyuter fanlari fakulteti\n" +
+                "\n" +
+                "Matematika fakulteti\n" +
+                "\n" +
+                "Shuningdek, HSE va London School of Economics (LSE) hamkorligida tashkil etilgan International " +
+                "College of Economics and Finance (ICEF) mavjud bo‘lib, bu yerda talabalar HSE va University of " +
+                "London diplomlarini olish imkoniyatiga ega .\n" +
+                "Cumulus Association\n" +
+                "+2\n" +
+                "Vikipediya\n" +
+                "+2\n" +
+                "Vikipediya\n" +
+                "+2\n" +
+                "\n");
+
+
+        return sendPhoto;
+
+    }
+
 }
 
 

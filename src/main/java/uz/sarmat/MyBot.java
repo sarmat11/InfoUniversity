@@ -85,6 +85,8 @@ public class MyBot extends TelegramLongPollingBot {
             }
         }
 
+        //korea
+
         if (text.equals("Seoul National University")) {
             try {
                 execute(myBotService.SeoulNationalUniversity(chatId));
@@ -124,6 +126,51 @@ public class MyBot extends TelegramLongPollingBot {
                 throw new RuntimeException(e);
             }
         }
+        //russia
+
+        if (text.equals("Moscow Institute of Physics and Technology")) {
+            try {
+                execute(myBotService.MoscowInstituteofPhysicsandTechnology(chatId));
+            } catch (TelegramApiException e) {
+                throw new RuntimeException(e);
+            }
+        }
+
+        if (text.equals("Saint Petersburg State University")) {
+            try {
+                execute(myBotService.SaintPetersburgStateUniversity(chatId));
+            } catch (TelegramApiException e) {
+                throw new RuntimeException(e);
+            }
+        }
+
+
+        if (text.equals("Moscow State University")) {
+            try {
+                execute(myBotService.MoscowStateUniversity(chatId));
+            } catch (TelegramApiException e) {
+                throw new RuntimeException(e);
+            }
+        }
+
+        if (text.equals("Higher School of Economics")) {
+            try {
+                execute(myBotService.HigherSchoolofEconomics(chatId));
+            } catch (TelegramApiException e) {
+                throw new RuntimeException(e);
+            }
+        }
+
+        if (text.equals("Tomsk State University")) {
+            try {
+                execute(myBotService.TomskStateUniversity(chatId));
+            } catch (TelegramApiException e) {
+                throw new RuntimeException(e);
+            }
+        }
+
+
+
 
 
 
