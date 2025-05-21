@@ -747,10 +747,6 @@ public class MyBotService {
                 "London diplomlarini olish imkoniyatiga ega .\n" +
                 "Cumulus Association\n" +
                 "+2\n" +
-                "Vikipediya\n" +
-                "+2\n" +
-                "Vikipediya\n" +
-                "+2\n" +
                 "\n");
 
 

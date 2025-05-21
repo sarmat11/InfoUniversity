@@ -153,7 +153,7 @@ public class MyBot extends TelegramLongPollingBot {
             }
         }
 
-        if (text.equals("Higher School of Economics")) {
+        if (text.equals("Higher School Economics")) {
             try {
                 execute(myBotService.HigherSchoolofEconomics(chatId));
             } catch (TelegramApiException e) {
