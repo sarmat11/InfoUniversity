@@ -61,6 +61,15 @@ public class MyBot extends TelegramLongPollingBot {
         }
 
 
+        if (text.equals("\uD83C\uDDFA\uD83C\uDDFFUzbekistan")) {
+            try {
+                execute(myBotService.Uzbekistan(chatId));
+            } catch (TelegramApiException e) {
+                throw new RuntimeException(e);
+            }
+        }
+
+
         if (text.equals("Orqaga")) {
             try {
                 execute(myBotService.tiltanlash(chatId));
@@ -153,7 +162,7 @@ public class MyBot extends TelegramLongPollingBot {
             }
         }
 
-        if (text.equals("Higher School Economics")) {
+        if (text.equals("Higher School of Economics")) {
             try {
                 execute(myBotService.HigherSchoolofEconomics(chatId));
             } catch (TelegramApiException e) {
@@ -168,6 +177,40 @@ public class MyBot extends TelegramLongPollingBot {
                 throw new RuntimeException(e);
             }
         }
+
+        if (text.equals("Toshkent Davlat Texnika Universiteti")) {
+            try {
+                execute(myBotService.ToshkentDavlatTexnikaUniversiteti(chatId));
+            } catch (TelegramApiException e) {
+                throw new RuntimeException(e);
+            }
+        }
+
+        if (text.equals("O‘zbekiston Davlat Jahon Tillari Universiteti")) {
+            try {
+                execute(myBotService.UzbekistonDavlatJahonTillariUniversiteti(chatId));
+            } catch (TelegramApiException e) {
+                throw new RuntimeException(e);
+            }
+        }
+
+
+        if (text.equals("Toshkent Moliya Instituti")){
+            try {
+                execute(myBotService.ToshkentMoliyaInstituti(chatId));
+            } catch (TelegramApiException e) {
+                throw new RuntimeException(e);
+            }
+        }
+
+        if (text.equals("Toshkent Arxitektura va Qurilish Instituti")){
+            try {
+                execute(myBotService.ToshkentArxitekturavaQurilishInstituti(chatId));
+            } catch (TelegramApiException e) {
+                throw new RuntimeException(e);
+            }
+        }
+
 
 
 

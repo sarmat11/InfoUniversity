@@ -125,12 +125,6 @@ public class MyBotService {
         KeyboardRow row = new KeyboardRow();
 
 
-        KeyboardButton button = new KeyboardButton();
-        button.setText("WIUT");
-        row.add(button);
-        rows.add(row);
-
-
         KeyboardButton button1 = new KeyboardButton();
         button1.setText("Harvard");
         row.add(button1);
@@ -241,13 +235,10 @@ public class MyBotService {
         KeyboardRow row = new KeyboardRow();
 
 
-
-
         KeyboardButton button = new KeyboardButton();
         button.setText("Moscow Institute of Physics and Technology");
         row.add(button);
         rows.add(row);
-
 
 
         KeyboardRow row2 = new KeyboardRow();
@@ -256,19 +247,16 @@ public class MyBotService {
         row2.add(button1);
 
 
-
         KeyboardButton button2 = new KeyboardButton();
         button2.setText("Moscow State University");
         row2.add(button2);
         rows.add(row2);
 
 
-
         KeyboardRow row1 = new KeyboardRow();
         KeyboardButton button3 = new KeyboardButton();
         button3.setText("Higher School of Economics");
         row1.add(button3);
-
 
 
         KeyboardButton button4 = new KeyboardButton();
@@ -286,7 +274,59 @@ public class MyBotService {
         replyKeyboardMarkup.setResizeKeyboard(true);
         sendMessage.setReplyMarkup(replyKeyboardMarkup);
         return sendMessage;
+
+
     }
+
+
+    public SendMessage Uzbekistan(Long chatId) {
+
+        SendMessage sendMessage = new SendMessage();
+        sendMessage.setChatId(chatId);
+        sendMessage.setText("Universititutlar");
+
+        ReplyKeyboardMarkup replyKeyboardMarkup = new ReplyKeyboardMarkup();
+        List<KeyboardRow> rows = new ArrayList<KeyboardRow>();
+        KeyboardRow row = new KeyboardRow();
+
+
+        KeyboardButton button = new KeyboardButton();
+        button.setText("O‘zbekiston Davlat Jahon Tillari Universiteti");
+        row.add(button);
+        rows.add(row);
+
+
+        KeyboardRow row2 = new KeyboardRow();
+        KeyboardButton button1 = new KeyboardButton();
+        button1.setText("Toshkent Moliya Instituti");
+        row2.add(button1);
+
+
+        KeyboardButton button2 = new KeyboardButton();
+        button2.setText("Toshkent Arxitektura va Qurilish Instituti");
+        row2.add(button2);
+        rows.add(row2);
+
+
+        KeyboardRow row1 = new KeyboardRow();
+        KeyboardButton button3 = new KeyboardButton();
+        button3.setText("Toshkent Davlat Texnika Universiteti");
+        row1.add(button3);
+
+
+        KeyboardButton button4 = new KeyboardButton();
+        button4.setText("Orqaga");
+        row1.add(button4);
+        rows.add(row1);
+
+
+        replyKeyboardMarkup.setKeyboard(rows);
+        replyKeyboardMarkup.setResizeKeyboard(true);
+        sendMessage.setReplyMarkup(replyKeyboardMarkup);
+        return sendMessage;
+
+    }
+
 
     public SendPhoto harvard(Long chatId) {
         SendPhoto sendPhoto = new SendPhoto();
@@ -316,7 +356,7 @@ public class MyBotService {
                 "\n" +
                 "Harvardda rasmiy minimal chegaralar ko‘rsatilmagan, lekin yuqori ball bo'lishi kutiladi, " +
                 "chunki raqobat juda kuchli.\n" +
-
+                "http://www.harvard.edu\n" +
                 "\n" +
                 "\n");
         return sendPhoto;
@@ -552,6 +592,9 @@ public class MyBotService {
     }
 
     //russia
+
+
+
     public SendPhoto MoscowInstituteofPhysicsandTechnology(Long chatId) {
         SendPhoto sendPhoto = new SendPhoto();
         sendPhoto.setChatId(chatId);
@@ -717,40 +760,218 @@ public class MyBotService {
     public SendPhoto HigherSchoolofEconomics(Long chatId) {
         SendPhoto sendPhoto = new SendPhoto();
         sendPhoto.setChatId(chatId);
-        sendPhoto.setPhoto(new InputFile("https://upload.wikimedia.org/wikipedia/commons/c/c0/HSE_University.jpg"));
+        sendPhoto.setPhoto(new InputFile("https://img.freepik.com/premium-photo/higher-school-economics-myasnitskaya-" +
+                "street-moscow_248906-2005.jpg"));
         sendPhoto.setCaption("\uD83C\uDFDB Umumiy ma'lumotlar\n" +
                 "Rasmiy nomi: Milliy tadqiqot universiteti — Higher School of Economics (HSE University)\n" +
                 "\n" +
                 "Tashkil etilgan yili: 1992-yil\n" +
-                "\n" +
                 "Asosiy kampus: Moskva, Rossiya\n" +
-                "\n" +
                 "\uD83C\uDF93 Ta'lim va dasturlar\n" +
-                "HSE University 98 ta bakalavriat va 182 ta magistratura dasturlarini taklif etadi, ularning ba'zilari to‘liq ingliz tilida olib boriladi. Shuningdek, universitetda doktorantura, qisqa muddatli kurslar, yozgi maktablar va onlayn dasturlar mavjud .\n" +
+                "HSE University 98 ta bakalavriat va 182 ta magistratura dasturlarini taklif etadi," +
+                " ularning ba'zilari to‘liq ingliz tilida olib boriladi. Shuningdek, universitetda doktorantura," +
+                " qisqa muddatli kurslar, yozgi maktablar va onlayn dasturlar mavjud .\n" +
                 "hse.ru\n" +
-                "\n" +
                 "HSE quyidagi fakultetlarga ega:\n" +
                 "Vikipediya\n" +
-                "\n" +
                 "Iqtisodiyot fakulteti\n" +
-                "\n" +
                 "Dunyo iqtisodiyoti va xalqaro munosabatlar fakulteti\n" +
-                "\n" +
                 "Kompyuter fanlari fakulteti\n" +
-                "\n" +
                 "Matematika fakulteti\n" +
-                "\n" +
                 "Shuningdek, HSE va London School of Economics (LSE) hamkorligida tashkil etilgan International " +
                 "College of Economics and Finance (ICEF) mavjud bo‘lib, bu yerda talabalar HSE va University of " +
                 "London diplomlarini olish imkoniyatiga ega .\n" +
-                "Cumulus Association\n" +
-                "+2\n" +
-                "\n");
+                "Cumulus Association\n"
+        );
 
 
         return sendPhoto;
 
     }
+
+
+    //uzb
+
+
+    public SendPhoto ToshkentDavlatTexnikaUniversiteti(Long chatId) {
+        SendPhoto sendPhoto = new SendPhoto();
+        sendPhoto.setChatId(chatId);
+        sendPhoto.setPhoto(new InputFile("https://upload.wikimedia.org/wikipedia/commons/5/57/TDTU.png"));
+        sendPhoto.setCaption("\uD83C\uDFDB Umumiy ma’lumotlar\n" +
+                "Tashkil etilgan yili: 1918\n" +
+                "\n" +
+                "Rasmiy nomi: Islom Karimov nomidagi Toshkent Davlat Texnika Universiteti\n" +
+                "\n" +
+                "Rektor: Sadriddin Turabjonov\n" +
+                "\n" +
+                "Talabalar soni: 23 268 nafardan ortiq\n" +
+                "\n" +
+                "Ta’lim tili: o‘zbek va rus tillari\n" +
+                "\n" +
+                "Ta’lim shakllari: kunduzgi, sirtqi va kechki\n" +
+                "\n" +
+                "Rasmiy sayt: tdtu.uz\n" +
+                "Vikipediya\n" +
+                "TDTU Qo'qon filiali\n" +
+                "\n" +
+                "\uD83C\uDF93 Fakultetlar va ta’lim yo‘nalishlari\n" +
+                "TDTU tarkibida 8 ta fakultet va 62 ta kafedra mavjud bo‘lib, 50 dan ortiq bakalavriat va 71 ta magistratura yo‘nalishlari bo‘yicha ta’lim beriladi. Asosiy fakultetlar:\n" +
+                "TDTU Qo'qon filiali\n" +
+                "+2\n" +
+                "blog.mentalaba.uz\n" +
+                "+2\n" +
+                "Mentalaba\n" +
+                "+2\n" +
+                "Oliygoh\n" +
+                "+2\n" +
+                "Kun.uz\n" +
+                "+2\n" +
+                "Imtihonlar\n" +
+                "+2\n" +
+                "\n" +
+                "Energetika fakulteti\n" +
+                "\n" +
+                "Elektronika va avtomatika fakulteti\n" +
+                "\n" +
+                "Geologiya va konchilik ishi fakulteti\n" +
+                "\n" +
+                "Mexanika-mashinasozlik fakulteti\n" +
+                "\n" +
+                "Neft va gaz fakulteti\n" +
+                "\n" +
+                "Muhandislik texnologiyalari fakulteti");
+
+
+        return sendPhoto;
+    }
+
+
+    public SendPhoto UzbekistonDavlatJahonTillariUniversiteti(Long chatId) {
+        SendPhoto sendPhoto = new SendPhoto();
+        sendPhoto.setChatId(chatId);
+        sendPhoto.setPhoto(new InputFile("https://images.app.goo.gl/pXogpfH9ichKfRmi9"));
+        sendPhoto.setCaption("\uD83C\uDFDB Tarixi va umumiy ma’lumotlar\n" +
+                "Tashkil etilgan yili: 1949-yilda Toshkent chet tillari pedagogika instituti sifatida tashkil etilgan. 1992-yilda Respublika Rus tili va adabiyoti instituti bilan birlashib, universitet maqomini oldi. \n" +
+                "UzSWLU.Uz\n" +
+                "Talabalar soni: 23 000 dan ortiq. \n" +
+                "UzSWLU.Uz\n" +
+                "Akademik xodimlar: 1 100 dan ortiq professor-o‘qituvchilar. \n" +
+                "italian-uzswlu.uz\n" +
+                "Fakultetlar soni: 10 ta. \n" +
+                "Vikipediya\n" +
+                "Ta’lim dasturlari: 27 ta bakalavriat va 19 ta magistratura yo‘nalishlari mavjud. \n" +
+                "UzSWLU.Uz\n" +
+                "Rasmiy sayt: uzswlu.uz\n" +
+                "UzSWLU.Uz\n" +
+                "\uD83D\uDCDA Fakultetlar va yo‘nalishlar\n" +
+                "Universitet quyidagi fakultetlar orqali ta’lim beradi:\n" +
+                "Ingliz tili fakultetlari (1-, 2-, 3-). \n" +
+                "Oliygoh\n" +
+                "Akadem\n" +
+                "Ingliz filologiyasi fakulteti.\n" +
+                "Roman-german filologiyasi fakulteti. \n" +
+                "Rus filologiyasi fakulteti.\n" +
+                "Sharq filologiyasi fakulteti. \n" +
+                "Oliygoh\n"
+        );
+
+
+        return sendPhoto;
+    }
+
+
+
+    public SendPhoto ToshkentMoliyaInstituti(Long chatId) {
+        SendPhoto sendPhoto = new SendPhoto();
+        sendPhoto.setChatId(chatId);
+        sendPhoto.setPhoto(new InputFile("https://smapse.com/storage/2019/09/v1-2.jpg"));
+        sendPhoto.setCaption("\uD83C\uDFDB Umumiy ma’lumotlar\n" +
+                "Talabalar soni: 15 000 dan ortiq\n" +
+                "\n" +
+                "Professor-o‘qituvchilar: 500 dan ortiq\n" +
+                "\n" +
+                "Ilmiy salohiyat: 60% atrofida\n" +
+                "\n" +
+                "Bitiruvchilarning ish bilan ta’minlanish darajasi: 98% dan yuqori\n" +
+                "\n" +
+                "Ta’lim shakllari: kunduzgi, kechki va sirtqi\n" +
+                "\n" +
+                "Rasmiy sayt: tfi.uz\n" +
+                "Tashkent Institute of Finance\n" +
+                "+1\n" +
+                "Rank.uz\n" +
+                "+1\n" +
+                "Tashkent Institute of Finance\n" +
+                "\n" +
+                "\uD83C\uDF93 Fakultetlar va ta’lim yo‘nalishlari\n" +
+                "TMI quyidagi asosiy fakultetlarga ega:\n" +
+                "\n" +
+                "Iqtisodiyot fakulteti\n" +
+                "\n" +
+                "Soliqlar va sug‘urta fakulteti\n" +
+                "\n" +
+                "Buxgalteriya hisobi va audit fakulteti\n" +
+                "\n" +
+                "Byudjet hisobi va g‘aznachilik fakulteti\n" +
+                "\n" +
+                "Bank ishi fakulteti\n" +
+                "\n" +
+                "Moliya fakulteti\n" +
+                "Oliygoh\n" +
+                "+2\n" +
+                "Oliygoh\n" +
+                "+2\n" +
+                "Rank.uz\n" +
+                "+2\n" +
+                "Tashkent Institute of Finance\n" +
+                "Bundan tashqari, sirtqi ta’lim bo‘limi mavjud bo‘lib, u yerda quyidagi yo‘nalishlar" +
+                " bo‘yicha kadrlar tayyorlanadi:\n" +
+                "sirtqi.tfi.uz\n" +
+                "+1\n" +
+                "sirtqi.tfi.uz\n" +
+                "+1");
+
+
+        return sendPhoto;
+    }
+
+    public SendPhoto ToshkentArxitekturavaQurilishInstituti(Long chatId) {
+        SendPhoto sendPhoto = new SendPhoto();
+        sendPhoto.setChatId(chatId);
+        sendPhoto.setPhoto(new InputFile("https://api.mentalaba.uz/logo/92e19862-cf08-4bc7-ad37-846ac2c60530.jpg"));
+        sendPhoto.setCaption("\uD83C\uDF93 Asosiy ma’lumotlar\n" +
+                "Rasmiy nomi: Toshkent Arxitektura-Qurilish Universiteti (TAQU)\n" +
+                "\n" +
+                "Tashkil topgan yili: 1991-yil\n" +
+                "\n" +
+                "Talabalar soni: 8 772 nafar\n" +
+                "\n" +
+                "Professor-o‘qituvchilar: 381 nafar, shundan 18 nafari fan doktori, 96 nafari fan nomzodi\n" +
+                "\n" +
+                "Fakultetlar:\n" +
+                "\n" +
+                "Arxitektura fakulteti\n" +
+                "\n" +
+                "Menejment fakulteti\n" +
+                "\n" +
+                "Ta’lim yo‘nalishlari: 22 ta bakalavriat, 23 ta magistratura mutaxassisliklari\n" +
+                "\n" +
+                "Ta’lim tillari: o‘zbek, rus, ingliz\n" +
+                "\n" +
+                "\uD83C\uDF10 Xalqaro hamkorlik\n" +
+                "TAQU Germaniya, Italiya, Polsha, Rossiya, Belarus, Koreya, Xitoy va boshqa mamlakatlarning 95 ta nufuzli oliy ta’lim muassasalari bilan hamkorlik qiladi. Universitetda Erasmus+ va DAAD kabi xalqaro dasturlar doirasida qo‘shma ta’lim loyihalari amalga oshirilmoqda. \n" +
+                "Taqu\n" +
+                "\uD83C\uDFD7 Amaliyot va infratuzilma\n" +
+                "Talabalar uchun zamonaviy axborot-resurs markazi mavjud bo‘lib, 247 958 dona elektron kitob fondiga ega.\n" +
+                "\n" +
+                "Universitet huzurida texnopark tashkil etilgan bo‘lib, bu yerda talabalar amaliy loyihalar ustida ishlash imkoniyatiga ega. \n" +
+                "talimtelekanali.uz\n" +
+                "Gazeta.Uz\n");
+
+
+        return sendPhoto;
+    }
+
 
 }
 
